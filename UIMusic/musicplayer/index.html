@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <ul>
+        <li style="float:left "><img src="navlogo.jpeg"  width="200" height="30"></a></li>
+        <li style="float:right "><a href="collab.html">start a collaboration</a></li>
+        <li style="float:right"><a href="index.html">home</a></li>
+   </ul>
+   <br>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <div class="container"> 
+    <div class="phone light">
+        <div id="top-menu">
+        <div class="button">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <button id="mode" class="button">
+            <i class="bi bi-brightness-high-fill" id="toggleDark"></i> 
+        </button>
+        <div class="button">
+            <i class="fas fa-bars"></i>
+        </div>
+        </div>
+        
+        <div class="thumbnail-border">
+        <div class="song-thumbnail"></div>
+        </div>
+        
+        <div id="song-details">
+        <h1 class="song-title">Hasrat</h1>
+        <span class="artist">Amir Jahari</span>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="song-controls">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div class="content">
+            <div class="button">
+                <img src="musicplayer/play.png" id="icon">
+            </div>
+        </div>
+
+        <audio id="mysong">
+            <source src="musicplayer/hasrat.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var mysong = document.getElementById("mysong");
+            var icon = document.getElementById("icon");
+
+            icon.onclick = function(){
+                if(mysong.paused){
+                    mysong.play();
+                    icon.src = "musicplayer/pause.png";
+                }else{
+                    mysong.pause();
+                    icon.src="musicplayer/play.png";
+                }
+            }
+        </script>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div> 
+    </div>
+</body>
+</html>
